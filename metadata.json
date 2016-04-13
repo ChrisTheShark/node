@@ -1,6 +1,6 @@
 {
   "name": "ChrisTheShark-nodejs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "ChrisTheShark",
   "summary": "Puppet module to install nodejs globally on Centos or Ubuntu Linux flavors.",
   "license": "Apache-2.0",
