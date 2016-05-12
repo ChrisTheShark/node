@@ -9,4 +9,5 @@ Gemfile.lock
 .bundle
 
 # Beaker
+.vagrant
 log
