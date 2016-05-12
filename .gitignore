@@ -1,8 +1,12 @@
 # Exclude package directory
-pkg/
+pkg
 
 # Exclude checksums
 checksums.json
 
 # Exclude Gemfile.lock
 Gemfile.lock
+.bundle
+
+# Beaker
+log
