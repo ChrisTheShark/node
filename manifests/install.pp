@@ -33,15 +33,15 @@ $download_location = $nodejs::params::download_location
     onlyif  => "test -f ${download_location}${executable}",
   } ->
   file { 'node_executable_link':
-    ensure => 'link',
-    path   => "${path}/node",
-    target => "${executable_dir}/node-${version}-linux-x64/bin/node",
+    ensure  => 'link',
+    path    => "${path}/node",
+    target  => "${executable_dir}/node-${version}-linux-x64/bin/node",
     require => Exec['unzip_exec'],
   } ->
   file { 'npm_executable_link':
-    ensure => 'link',
-    path   => "${path}/npm",
-    target => "${executable_dir}/node-${version}-linux-x64/bin/npm",
+    ensure  => 'link',
+    path    => "${path}/npm",
+    target  => "${executable_dir}/node-${version}-linux-x64/bin/npm",
     require => Exec['unzip_exec'],
   } ->
   exec { 'install_pm2':
@@ -50,9 +50,9 @@ $download_location = $nodejs::params::download_location
     require => File['npm_executable_link'],
   } ->
   file { 'pm2_executable_link':
-    ensure => 'link',
-    path   => "${path}/pm2",
-    target => "${executable_dir}/node-${version}-linux-x64/lib/node_modules/pm2/bin/pm2",
+    ensure  => 'link',
+    path    => "${path}/pm2",
+    target  => "${executable_dir}/node-${version}-linux-x64/lib/node_modules/pm2/bin/pm2",
     require => Exec['install_pm2'],
   } ->
   exec { 'remove_temp_files':

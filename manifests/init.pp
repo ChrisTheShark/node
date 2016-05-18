@@ -19,9 +19,9 @@ $executable_dir = $nodejs::params::executable_dir,
 $download_location = $nodejs::params::download_location
 ) inherits nodejs::params {
   class { 'nodejs::install':
-    path           => $path,
-    version        => $version,
-    executable_dir => $executable_dir,
+    path              => $path,
+    version           => $version,
+    executable_dir    => $executable_dir,
     download_location => $download_location,
   }
 }
